@@ -10,7 +10,7 @@ from app.data import Database
 from app.graph import chart
 from app.machine import Machine
 
-SPRINT = 1
+SPRINT = 2
 APP = Flask(__name__)
 
 
@@ -26,7 +26,7 @@ def home():
 
 @APP.route("/data")
 def data():
-    if SPRINT < 1:
+    if SPRINT < 2:
         return render_template("data.html")
     db = Database()
     return render_template(

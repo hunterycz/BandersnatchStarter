@@ -24,7 +24,7 @@ class Database:
         Takes an amount and enter the "amount" rows into a MongoDB Database.
 
         Parameters:
-        - amount (int): An Integer
+        amount (int): An Integer
         '''
         # saves monster data in a variable "monster_list"
         monster_list = [Monster().to_dict() for _ in range(amount)]
@@ -55,6 +55,7 @@ class Database:
         return DataFrame(self.collection.find()).drop(columns='_id')
 
     def html_table(self) -> str:
+
         '''
         Returns all of the documents in the connected MongoDB
         Database monsters collection in the specified HTML Format.
@@ -98,3 +99,11 @@ class Database:
 
         # return html
         return html
+
+
+if __name__ == '__main__':
+    # instantiate a Database
+    db = Database()
+
+    db.reset()
+    db.seed(128)
