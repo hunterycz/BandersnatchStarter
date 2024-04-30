@@ -19,6 +19,7 @@ pymongo = {extras = ["srv"], version = "*"}
 python-dotenv = "*"
 scikit-learn = "*"
 scipy = "*"
+matplotlib = "*"
 
 [dev-packages]
 

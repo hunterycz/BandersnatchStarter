@@ -99,11 +99,3 @@ class Database:
 
         # return html
         return html
-
-
-if __name__ == '__main__':
-    # instantiate a Database
-    db = Database()
-
-    db.reset()
-    db.seed(128)

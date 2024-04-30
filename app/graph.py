@@ -17,6 +17,7 @@ def chart(df, x, y, target) -> Chart:
     '''
 
     # save the Chart() class to a variable name 'graph'
+    # configure graph based on data from the page source
     graph = Chart(
         data=df,
         title=f"{y} by {x} for {target}"
